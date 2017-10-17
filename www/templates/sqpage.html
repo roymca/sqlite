@@ -1,0 +1,34 @@
+<ion-view>
+	<ion-content class="w3-container" style="padding:9px">
+	
+	<div class="spacer" style="height:70px"></div>
+  
+		<div class="table1">
+			<form>
+				<label class = "item item-input">
+					<input type="text" placeholder="firstname" ng-model="data.firstname"  style="color:black">
+				</label>
+				
+				<label class = "item item-input">
+					<input type="text" placeholder="lastname" ng-model="data.lastname"  style="color:black">
+				</label>
+				<button class="button button-block button-large" ng-click="insert(data)" style="background-color:green;color:white"> insert</button>
+				<button class="button button-block button-large button-royal" ng-click="show(data)" style="color:white"> search</button>  
+		<!--		<button class="button button-block button-large button-assertive" ng-click="delete()" style="color:white"> delete alldata</button>
+			-->
+			</form>
+		</div>
+		
+		<table>
+			<tr>
+				<th>First name</th>
+				<th>Last name</th>
+			</tr>
+			<tr ng-repeat="item in alldata">
+				<td>{{item.firstname}}</td>
+				<td>{{item.lastname}}</td>
+			</tr>
+		</table>
+	 
+	 </ion-content>
+</ion-view>
